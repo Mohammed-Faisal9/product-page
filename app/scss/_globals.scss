@@ -1,0 +1,93 @@
+// global rules
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $neutral-clr-seconery;
+    font-family: $font-family;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+// container
+.container {
+    width: 92%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+// flexbox
+.flex {
+    display: flex;
+
+    &-jc-sp {
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+}
+// buttons
+.primary-btn {
+    background-color: $primary-clr;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 60px;
+    color: $white-clr;
+    min-width: 150px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: $primary-clr-alt;
+    }
+}
+// font
+.fs-xl {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+// visibility
+.hide-for-mobile {
+    // display: none;
+    // @include breakpoint-up(medium) {
+    //     display: inherit;
+    // }
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+}
+
+.p-relative {
+    position: relative;
+}
